@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<style>
+    .light-mode {
+		background: #f5f5f5;
+}
+.dark-mode {
+		background: #333;
+	color: #fff;
+}
+</style>
+    <title>Day/Night mode</title>
+</head>
+<body>
+    <h1>Day and Night Mode Button</h1>
+    <p>This button when clicked will allow for either day or night 
+        mode for the webpage. 
+    </p>
+
+<!-- button -->
+    <button id="modeToggle">Dark Mode</button>
+
+<!-- js for button -->
+<script>
+    var modeToggle = document.querySelector("#modeToggle");
+modeToggle.addEventListener('click', function(){
+	if(modeToggle.innerHTML == "Dark Mode") {
+		document.querySelector("body").classList.remove("light-mode")
+		document.querySelector("body").classList.add("dark-mode")
+		modeToggle.innerHTML = "Light Mode";
+	} else {
+		document.querySelector("body").classList.remove("dark-mode")
+		document.querySelector("body").classList.add("light-mode")
+		modeToggle.innerHTML = "Dark Mode";
+	}
+});
+</script>
+</body>
+</html>
